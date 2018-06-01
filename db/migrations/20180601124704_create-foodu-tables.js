@@ -21,9 +21,25 @@ exports.up = function(knex, Promise) {
         table.bigInteger('foodtruck_license_id');
 
         table.timestamp('created_at').notNullable().defaultTo(knex.raw('now()'));
-    });
+    })
+    .createTable('bookings', (table) => {
+        table.uuid('id').primary();
+        table.integer("foodtruck_id").unsigned();
+        table.integer('venue_id').unsigned();
+        table
+          .foreign('foodtruck_id');
+        table
+          .foreign('venue_id');
+        table.date('date');
+        table.string('status').defaultTo('available')
+
+        table.timestamp('created_at').notNullable().defaultTo(knex.raw('now()'));
+    })
 };
 
 exports.down = function(knex, Promise) {
-    return knex.schema.dropTable('venues');
+    return knex.schema
+        .dropTable('bookings')
+        .dropTable('venues')
+        .dropTable('foodtrucks');
 };

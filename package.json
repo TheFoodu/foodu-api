@@ -8,7 +8,6 @@
   "dependencies": {
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
-    "dotenv": "^5.0.1",
     "ejs": "~2.5.7",
     "express": "~4.16.0",
     "http-errors": "~1.6.2",
@@ -17,6 +16,7 @@
     "pg": "^7.4.3"
   },
   "devDependencies": {
+    "nodemon": "^1.17.5",
     "prettier": "^1.12.1",
     "pretty-quick": "^1.4.1"
   }

@@ -15,9 +15,7 @@ let Booking = {
         return database('bookings')
             .insert({ 
                 'foodtruck_id': body.foodTruckId,
-                'venue_id': body.venueId,
                 'date': body.date,
-                'status': body.status 
             })
     }
 }

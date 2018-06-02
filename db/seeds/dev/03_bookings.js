@@ -6,14 +6,14 @@ exports.seed = function (knex, Promise) {
       // Inserts seed entries
       return knex("bookings").insert([
         {
-          foodtruck_id: 1,
+          foodtruck_auth_id: "CLkh5QadsoOF1he68RXUOrFUIyi1",
           venue_id: 1,
           date: "2018-07-02",
           status: "confirmed",
           time_range: "1:00 - 4:00"
         },
         {
-          foodtruck_id: 1,
+          foodtruck_auth_id: "CLkh5QadsoOF1he68RXUOrFUIyi1",
           venue_id: null,
           date: "2018-07-04",
           status: "available",

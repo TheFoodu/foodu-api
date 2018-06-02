@@ -9,7 +9,6 @@ exports.up = function(knex, Promise) {
         table.string('address_zip');
         table.decimal('latitude');
         table.decimal('longitude');
-        
         table.timestamp('created_at').notNullable().defaultTo(knex.raw('now()'));
     })
     .createTable('foodtrucks', (table) => {

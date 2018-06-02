@@ -7,8 +7,6 @@ exports.seed = function(knex, Promise) {
         {
           auth_id: "CLkh5QadsoOF1he68RXUOrFUIyi1",
           foodtruck_name: "Burger Bash",
-          foodtruck_legal_name: "Burger Bash",
-          foodtruck_license_id: 10003444445555
         }
       ]);
     });

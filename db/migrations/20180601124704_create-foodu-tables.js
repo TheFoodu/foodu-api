@@ -1,7 +1,7 @@
 
 exports.up = function(knex, Promise) {
     return knex.schema.createTable('venues', (table) => {
-        table.integer('id').primary();
+        table.increments('id').primary();
         table.string('venue_name');
         table.string('venue_legal_name');
         table.string('liquor_license_type');
@@ -17,7 +17,7 @@ exports.up = function(knex, Promise) {
         table.timestamp('created_at').notNullable().defaultTo(knex.raw('now()'));
     })
     .createTable('foodtrucks', (table) => {
-        table.integer('id').primary();
+        table.increments('id').primary();
         table.string('foodtruck_name');
         table.string('foodtruck_legal_name');
         table.bigInteger('foodtruck_license_id');
@@ -25,9 +25,9 @@ exports.up = function(knex, Promise) {
         table.timestamp('created_at').notNullable().defaultTo(knex.raw('now()'));
     })
     .createTable('bookings', (table) => {
-        table.integer('id').primary();
+        table.increments('id').primary();
         table.integer("foodtruck_id").unsigned();
-        table.integer('venue_id').unsigned();
+        table.integer('venue_id').unsigned().defaultTo(null);
         table
           .foreign('foodtruck_id').references('foodtrucks.id').onDelete('cascade');
         table

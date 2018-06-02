@@ -11,4 +11,15 @@ const index = function(req, res, next) {
         })
 }
 
-module.exports = { index }
+const create = function (req, res, next) {
+    Booking.new(req.body)
+        .then(function (booking) {
+            if (!booking) {
+                return res.sendStatus(404)
+            } else {
+                return res.sendStatus(201)
+            }
+        })
+}
+
+module.exports = { index, create }

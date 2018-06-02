@@ -1,6 +1,7 @@
 const environment = process.env.NODE_ENV || 'development';
 const configuration = require('../knexfile')[environment];
 const database = require('knex')(configuration);
+pry = require("pryjs");
 
 let Venue = {
     new: function(body) {
@@ -15,18 +16,25 @@ let Venue = {
             'longitude': body.longitude
         })
         .returning('id')
-        .then( function(id) {
-        return database('bookings').select("*")
-        .where({
-            date: body.date,
-            foodtruck_auth_id: body.auth_id
+    },
+
+    update: function(body, venueId) {
+        return venueId
+        .then(idArr => {
+            let id = idArr[0]
+            return database('bookings').select("*")
+            .where({
+                date: body.date,
+                foodtruck_auth_id: body.authId
             })
             .update({
                 venue_id: id,
                 status: 'pending',
                 foodtruck_auth_id: body.authId,
-                date: body.date
+                date: body.date,
+                time_range: ""
             })
+            .returning("*")
         })
     }
 }

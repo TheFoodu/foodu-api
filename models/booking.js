@@ -13,11 +13,13 @@ let Booking = {
     },
 
     new: function(body) {
-        return database('bookings')
-            .insert({ 
-                'foodtruck_auth_id': body.authId,
-                'date': body.date,
-            })
+        body.selectDates.forEach(function(e) {
+            return database('bookings')
+                .insert({ 
+                    'foodtruck_auth_id': body.authId,
+                    'date': e,
+                })
+        })
     }
 }
 

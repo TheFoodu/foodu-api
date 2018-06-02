@@ -5,7 +5,7 @@ const database = require('knex')(configuration)
 let Booking = {
 
     all: function() {
-        return database.select().table('booking')
+        return database('booking').select('*')
             .then(function(bookings) {
                 return bookings
             })

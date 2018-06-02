@@ -4,7 +4,7 @@
 ## Sections
 
 * [Introduction](#introduction)
-* [Prerequsities](#Prerequsities)
+* [Prerequisites](#prerequisites)
 * [Getting Started](#getting-started)
 * [Built With](#built-with)
 * [API Documentation](#api-documentation)
@@ -15,9 +15,9 @@
 
 Foodu is a B2B marketplace to connect food trucks with venues & event planners – giving them a platform for data-driven decision making. Using the Foodu platform, food trucks will be able to manage their bookings, request new venues and engage with customers.
 
-The Foodu API provides the [Foodu mobile application] (https://github.com/TheFoodu/foodu/) access to the Foodu booking database. 
+The Foodu API provides the [Foodu mobile application](https://github.com/TheFoodu/foodu/) access to the Foodu booking database. 
 
-<img width="400" alt="screen shot 2018-06-01 at 7 09 28 pm" src="https://user-images.githubusercontent.com/26471447/40868891-5ccf947a-65cf-11e8-9864-ca6b2cb07ba9.png">
+<image src="https://user-images.githubusercontent.com/26471447/40822391-254a09b4-6529-11e8-9648-9e910bc658b3.png" width="250" />
 
 Instructions for getting started will be found in the following GitHub repositories.
 
@@ -25,7 +25,7 @@ Instructions for getting started will be found in the following GitHub repositor
 
 [Foodu Backend Repository](https://github.com/TheFoodu/foodu-api)
 
-##Prerequsities
+## Prerequisites
 
 Prerequsities for running the Foodu API locally include:
 
@@ -123,3 +123,16 @@ Example **response:**
   }
 ]
 ```
+
+## Contributors
+
+* [John Leach](https://github.com/johnredcouch)
+* [Shawn Meek](https://github.com/iamshawnmeek)
+* [Greg Moore](https://github.com/gmoore-erg)
+* [Nick Teets](https://github.com/nicktu12)
+* [Jonah Walker](https://github.com/SupposedlySam)
+* [Dione Wilson](https://github.com/dionew1)
+
+## License
+
+This project is licensed under the MIT License - see [LICENSE.md](LICENSE.md) for details.

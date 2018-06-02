@@ -6,6 +6,7 @@ let Booking = {
 
     all: function() {
         return database('bookings').select('*')
+            .leftOuterJoin('venues', 'bookings.venue_id', 'venues.id')
             .then(function(bookings) {
                 return bookings
             })

@@ -9,6 +9,7 @@ var usersRouter = require('./routes/users');
 
 // vars for api routes
 var bookingsRouter = require('./routes/api/v1/bookings')
+var venuesRouter = require("./routes/api/v1/venues");
 
 var app = express();
 
@@ -27,6 +28,7 @@ app.use('/users', usersRouter);
 
 // api routes
 app.use('/api/v1/bookings', bookingsRouter)
+app.use("/api/v1/venues", venuesRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -6,6 +6,7 @@ let Booking = {
 
     all: function() {
         return database('bookings').select('*')
+            .leftOuterJoin('venues', 'bookings.venue_id', 'venues.id')
             .then(function(bookings) {
                 return bookings
             })
@@ -14,7 +15,7 @@ let Booking = {
     new: function(body) {
         return database('bookings')
             .insert({ 
-                'foodtruck_id': body.foodTruckId,
+                'foodtruck_auth_id': body.authId,
                 'date': body.date,
             })
     }

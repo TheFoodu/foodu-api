@@ -11,9 +11,9 @@ const index = function(req, res, next) {
         })
 }
 
-const create = function (req, res, next) {
+const create = function(req, res, next) {
     Booking.new(req.body)
-        .then(function (booking) {
+        .then(function(booking) {
             if (!booking) {
                 return res.sendStatus(404)
             } else {
